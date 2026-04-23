@@ -1,0 +1,1555 @@
+/* 🔥 Reset básico (remove estilos padrão do navegador) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS GLOBAIS ===== */
+:root {
+  --dourado: linear-gradient(45deg, #d4af37, #ffd700); /* gradiente dourado */
+  --laranja: linear-gradient(45deg, #ff6600, #ff8533); /* gradiente laranja */
+  --preto: #000000; /* preto base */
+  --branco: #ffffff; /* branco */
+  --cinza: #777777; /* cinza */
+  --cor-button-dourado: #a37852; /* cor do botão */
+}
+
+/* 🌈 Estilos globais / 🧠 Fonte + fundo geral  */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* fonte padrão */
+  background-color: #8e9091, #ffffff; /* fundo claro e suave */
+}
+
+/* ===================================================== */
+/* 📌  MENU LATERAL */
+/* ===================================================== */
+
+#menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #000, #111);
+  padding: 20px;
+
+  z-index: 1000; /* 🔥 garante que fique acima */
+}
+
+/* 🖼️ Logo */
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===================================================== */
+/* 📚  NAVEGAÇÃO */
+/* ===================================================== */
+
+nav ul {
+  list-style: none;
+  margin-top: 6rem; /* espaço entre logo e menu */
+}
+
+/* 🔥 cada item ocupa espaço */
+
+nav li {
+  margin: 15px 0;
+}
+
+/*  Links */
+
+nav a {
+  text-decoration: none;
+  color: var(--cinza);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* ✨  Hover nos links */
+
+nav a:hover {
+  color: var(--cor-button-dourado);
+}
+
+.btn-agendar {
+  padding: 10px 20px;
+  background-color: var(--cor-button-dourado);
+  color: #0b0a0a;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12.5rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-agendar:hover {
+  background-color: #878584;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--branco);
+}
+
+.btn-agendar:active {
+  background-color: #775d47;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95); /* efeito de clique */
+}
+
+/* ===================================================== */
+/* 🎯 CONTEÚDO PRINCIPAL */
+/* ===================================================== */
+
+main {
+  margin-left: 250px; /* Espaço para o menu lateral */
+  width: calc(100% - 250px); /* Largura total menos o menu */
+}
+
+main #home {
+  background-color: #d3d3d3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* 100% da altura da tela */
+
+  display: flex;
+  align-items: center; /* centraliza vertical */
+  justify-content: center; /* centraliza horizontal */
+  text-align: center;
+
+  /* ✨ animação inicial */
+
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.6s;
+}
+
+main #home.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🎯 Conteúdo interno */
+
+#home header {
+  max-width: 600px;
+}
+
+#home header h1 {
+  color: var(--cor-button-dourado);
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+#home header p {
+  font-size: 1.2rem;
+  color: var(--cor-black);
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: start; /* alinha o texto à esquerda */
+}
+
+/* ✨ Botão Agendar agora */
+
+#home a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: var(--preto);
+  border-radius: 8px;
+  color: #f8f6f6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: #111 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra leve */
+}
+
+#home a:hover {
+  background-color: #a37852;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--preto);
+}
+
+#home a:active {
+  transform: scale(0.95);
+  background-color: #775d47;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================================== */
+/* 👨‍⚕️ SECTION SOBRE */
+/* ===================================================== */
+
+#sobre {
+  /* 🎯 FLEX → organiza imagem + texto lado a lado */
+
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+  padding: 200px 60px;
+
+  gap: 60px; /* espaço entre imagem e texto */
+
+  /* 🎨 fundo suave premium */
+
+
+  /* ✨ animação inicial */
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.8s ease;
+}
+
+/* ✨ quando ativar (com JS depois) */
+
+#sobre.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#sobre h2 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+
+  /* 🎨 efeito gradiente no texto */
+
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🖼️ IMAGEM */
+
+#sobre img {
+  width: 320px;
+  height: 320px;
+  border: 2px solid rgba(0, 0, 0, 0.3); /* borda leve */
+  object-fit: cover; /* 🔥 evita distorção */
+  border-radius: 50%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease; /* ✨ efeito suave */
+}
+
+/* 💥 efeito ao passar o mouse */
+#sobre img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(0, 0, 0, 0.5); /* borda mais forte no hover */
+  transition: all 0.9s ease; /* suaviza a transição */
+}
+
+/* 📝 TEXTO */
+
+#sobre .sobre-texto {
+  max-width: 500px;
+  text-align: left;
+}
+
+#sobre p {
+  font-size: 1.1rem;
+  line-height: 1.7; /* melhora leitura */
+  color: #333;
+
+  /* 💡 efeito leve */
+
+  opacity: 0.9;
+}
+
+
+/* ===================================================== */
+/* 🧠 ESPECIALIDADES */
+/* ===================================================== */
+
+#especialidades {
+  padding: 40px 60px;
+  background: linear-gradient(120deg, #f5f5f5, #ffffff);
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.5s;
+}
+
+#especialidades.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#especialidades h2 {
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  padding: 20px;
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+.especialidades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* CARD */
+.card-especialidade {
+  border-radius: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background: #fff;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+/* IMAGEM */
+.img-card {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+/* CONTEÚDO */
+.card-especialidade .conteudo {
+  padding: 25px;
+  text-align: center;
+}
+
+.card-especialidade h3 {
+  color: #a37852;
+  margin-bottom: 10px;
+}
+
+.card-especialidade p {
+  color: #555;
+}
+
+/* HOVER - ZOOM NA IMAGEM */
+.card-especialidade:hover img {
+  transform: scale(1.1);
+}
+
+/* HOVER - LEVANTAR CARD */
+.card-especialidade:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* ✨ EFEITO DE BRILHO */
+.card-especialidade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.card-especialidade:hover::before {
+  left: 120%;
+}
+
+/* 🔥 CARD DE DESTAQUE */
+.card-especialidade.destaque {
+  border: 2px solid #d4af37;
+  transform: scale(1.05);
+}
+
+
+/* 🔥 BOTÃO DENTRO DO CARD */
+.btn-card {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn-ver-mais {
+  display: flex;
+  margin: 40px auto;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  color: #f3f2f2;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+/* 🧠 EFEITO 3D NO CARD */
+.card-especialidade {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/*  ESCONDER ESPECIALIDADES EXTRAS */
+.especialidade-hidden {
+  display: none;
+}
+
+/* ===================================================== */
+/* 🛠️ SECTION SERVIÇOS 
+/* ===================================================== */
+
+#servicos {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* 🎯 cria colunas automáticas e responsivas */
+  gap: 30px;
+  background: linear-gradient(120deg, #f8fafc, #e2e8f0);
+  padding: 80px 60px;
+
+  /* ✨ animação inicial */
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.8s ease;
+}
+
+.titulo-publico {
+  grid-column: 1 / -1; /* 🔥 título ocupa toda a largura do grid */
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+#servicos .descricao-servicos {
+  grid-column: 1 / -1; /* 🔥 descrição ocupa toda a largura do grid */
+  text-align: estart;
+  font-size: 1.1rem;
+  width: 35rem;
+  color: #555;
+}
+
+/* ✨ animação ativa */
+
+#servicos.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Titulo serviço */
+
+#servicos h2 {
+  text-align: estart;
+  grid-column: 1 / -1; /* 🔥 ocupa toda largura do grid */
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  /* 🎨 gradiente profissional */
+
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🛠️ Cardio de serviços */
+
+#servicos article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  /* 🎯 animação suave */
+
+  transition: all 0.3s ease;
+}
+
+/* 💥 efeito hover no card */
+
+#servicos article:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Titulo do serviço */
+
+#servicos h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+#servicos video {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+#servicos figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #777;
+}
+
+#servicos p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* 🔥 BOTÃO VER MAIS */
+.btn-ver-mais {
+  grid-column: 1 / -1;
+  margin: 40px auto;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  color: #f3f2f2;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-ver-mais:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 🧠 EFEITO 3D NO CARD */
+#servicos article {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* 🔥 ESCONDER SERVIÇOS EXTRAS */
+.servico-hidden {
+  display: none;
+}
+
+
+/* ===================================================== */
+/* 🔍 💳 PLANOS SECAO PRINCIPAL */
+/* ===================================================== */
+
+#planos {
+  display: grid; /* 🎯 grid para organizar os planos em colunas responsivas */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 60px;
+  background: linear-gradient(120deg, #111, #000);
+  color: white;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.4s;
+}
+
+#planos.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#planos h2 {
+  grid-column: 1 / -1; /* 🔥 título ocupa toda a largura do grid */
+  font-size: 2.5rem;
+  text-align: center;
+
+  background: linear-gradient(45deg, #a37852);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#planos article {
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 1.4s;
+}
+
+#planos article:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: linear-gradient(145deg, #111, #000);
+  border: 2px solid #d4af37;
+  box-shadow: 0 20px 60px rgba(255, 165, 0, 0.2);
+}
+
+#planos h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--cinza);
+}
+
+#planos p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+#planos strong {
+  display: block;
+  font-size: 2rem;
+  margin: 15px 0;
+  color: var(--cor-button-dourado);
+}
+
+#planos .botao-plano {
+  grid-column: 1 / -1; /* 🔥 ocupa toda largura do grid */
+  justify-self: center; /* 🔥 centraliza dentro do grid */
+  margin-top: 30px;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cinza);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#planos button:hover {
+  color: var(--preto);
+  background: var(--cor-button-dourado);
+}
+
+#planos button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+/* 🔍 DETALHES DOS PLANOS */
+#detalhe-planos {
+  padding: 100px 60px;
+  background: linear-gradient(120deg, #000, #111);
+  color: white;
+}
+
+/* 🔥 ESCONDIDO */
+.hidden-planos {
+  display: none;
+}
+
+/* 🔥 TÍTULO */
+.titulo-detalhe-planos {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔥 CADA BLOCO */
+.plano-detalhe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+/* 🔥 INVERTE LADO (efeito zig-zag) */
+.plano-detalhe.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 🖼️ IMAGEM */
+.plano-detalhe img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.8s ease,
+    box-shadow 0.9s ease;
+}
+
+.plano-detalhe img:hover {
+  transform: scale(1.05);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 70px rgba(120, 119, 119, 0.5);
+  cursor: pointer;
+}
+
+/* 📄 TEXTO */
+.plano-info {
+  max-width: 500px;
+}
+
+.plano-info h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--branco);
+}
+
+.plano-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* 🔥 LISTA */
+.plano-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.plano-info li {
+  margin: 8px 0;
+  color: #aaa;
+}
+
+/* 💰 PREÇO */
+.plano-info strong {
+  font-size: 1.8rem;
+  color: #d4af37;
+}
+
+/* ===================================================== */
+/* ⭐ SECTION DEPOIMENTOS */
+/* ===================================================== */
+
+#depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 80px 60px;
+  background: linear-gradient(120deg, #f8fafc, #e2e8f0);
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.3s;
+}
+
+#depoimentos.show {
+  /* ✨ animação ativada pelo JS */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#depoimentos h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+
+  background: linear-gradient(45deg, #a37852, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#depoimentos article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: #fff;
+  padding: 25px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: 0.4s;
+}
+
+#depoimentos article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+#depoimentos img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+#depoimentos blockquote {
+  font-style: italic;
+  color: #444;
+  line-height: 1.6;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#depoimentos blockquote::before {
+  /* 💡 efeito de aspas decorativas */
+  content: "“";
+  font-size: 4rem;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+#depoimentos p strong {
+  color: #a37852;
+}
+
+#depoimentos article::before {
+  /* 💡 barra decorativa no topo do card */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(45deg, #a37852, #d4af37);
+}
+
+/* ===================================================== */
+/* ⭐ AVALIAÇÕES */
+/* ===================================================== */
+
+#avaliacoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 80px 60px;
+  background: linear-gradient(45deg, #a37852, #d4af37);
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.3s;
+}
+
+#avaliacoes.show {
+  /* ✨ animação ativada pelo JS */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#avaliacoes h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  color: var(--preto);
+}
+
+#avaliacoes article p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+#avaliacoes article {
+  background: #0e0e0e;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+
+  transition: 1.4s;
+}
+
+#avaliacoes article:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: linear-gradient(45deg, #565555, #333232);
+  border: 2px solid #d4af37;
+  box-shadow: 0 20px 60px rgba(255, 165, 0, 0.2);
+  transition: 1.0s;
+}
+
+/* ===================================================== */
+/* ⭐ SISTEMA DE ESTRELAS */
+/* ===================================================== */
+
+.estrelas {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.estrela {
+  opacity: 0.3;
+  transition: 0.2s;
+}
+
+.estrela.ativa {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.feedback {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #fff;
+}
+
+/* ===================================================== */
+/* 📞 CONTATO */
+/* ===================================================== */
+
+#contato {
+  padding: 80px 60px;
+  background: linear-gradient(120deg, #111, #000);
+  color: white;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.3s;
+}
+
+#contato.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#contato h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--cor-button-dourado);
+}
+
+#contato form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 🧾 FIELDSET CAIXA DO FORMULARIO */
+
+#contato fieldset {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* 🏷️ LEGEND */
+
+#contato legend {
+  padding: 0 10px;
+  color: var(--cor-button-dourado);
+}
+
+/* 🏷️ LABEL */
+
+#contato label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+#contato input,
+#contato textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* ✨ FOCO */
+
+#contato input:focus,
+#contato textarea:focus {
+  box-shadow: 0 0 10px #ff6600;
+}
+
+#contato button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cinza);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contato button:hover {
+  color: var(--preto);
+  background: var(--cor-button-dourado);
+}
+
+#contato button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+/* ===================================================== */
+/* 💬 WHATSAPP */
+/* ===================================================== */
+
+#whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  /* 🔥 estado inicial (escondido) */
+  opacity: 0;
+  transform: translateY(80px) scale(0.8);
+
+  /* ✨ TRANSIÇÃO SUAVE REAL */
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
+}
+
+/* 🚀 quando aparecer (JS ativa isso) */
+#whatsapp.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 💥 HOVER SUAVE */
+#whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* ✨ clique (efeito real de botão) */
+#whatsapp:active {
+  transform: scale(0.95);
+}
+
+/* ===================================================== */
+/* 🔻 FOOTER */
+/* ===================================================== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 30px 20px;
+  background-color: #111;
+  color: #777;
+}
+
+.minha-footer h3 {
+  color: var(--cor-button-dourado);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer a {
+  color: var(--cor-button-dourado);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .minha-footer {
+  margin-bottom: 15px;
+}
+
+footer .minha-footer-redesSociais {
+  margin-top: 15px;
+}
+
+footer .minha-footer-redesSociais nav a {
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+footer .minha-footer-redesSociais img {
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  display: inline;
+}
+
+footer .minha-footer-redesSociais img:hover {
+  transform: scale(1.2);
+}
+
+footer .minha-footer-redesSociais nav a:hover {
+  color: var(--cor-button-dourado);
+}
+
+footer .minha-footer-redesSociais nav a:active {
+  color: #a37852;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* ===================================================== */
+/* 🔧 CORREÇÕES GERAIS DE RESPONSIVIDADE */
+/* ===================================================== */
+
+/* 🔥 evita estouro de layout */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔥 corrige textos largos */
+#servicos .descricao-servicos {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* 🔥 melhora iframes */
+#servicos iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+}
+
+/* 🔥 melhora vídeos */
+#servicos video {
+  width: 100%;
+  height: auto;
+}
+
+/* 🔥 remove problemas no footer */
+footer {
+  margin-left: 0; /* corrigido para responsivo */
+}
+
+/* 🔥 corrige body */
+body {
+  overflow-x: hidden;
+}
+
+/* 🔥 melhora scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================================================== */
+/* 📱 RESPONSIVIDADE */
+/* ===================================================== */
+
+/* 🧑🏻‍💻 Telas grandes */
+
+@media screen {
+  /* 🔥 mantém o layout original para telas grandes */
+
+  #menu-lateral {
+    width: 250px;
+  }
+
+  #menu-lateral .btn-agendar {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin-top: 220px;
+  }
+
+  main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  #sobre {
+    flex-direction: row;
+  }
+
+  #sobre h2 {
+    position: static;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  /* 🛠️ SECTION SERVIÇOS */
+
+  #servicos h2 {
+    text-align: center;
+  }
+
+  #servicos .descricao-servicos {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  #servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  #servicos article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  #servicos article:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  #servicos h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #111;
+  }
+
+  #servicos iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+  }
+
+  #servicos p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* 🔍 NOSSOS PLANOS */
+
+  #planos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 60px;
+    background: linear-gradient(120deg, #111, #000);
+    color: white;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1.4s;
+  }
+
+  /* ⭐ DEPOIMENTOS */
+
+  #depoimentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 60px;
+    background: linear-gradient(120deg, #f8fafc, #e2e8f0);
+  }
+
+  #depoimentos article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: #ddd9d9;
+    padding: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.4s;
+  }
+
+  #depoimentos article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ⭐ AVALIAÇÕES */
+
+  #avaliacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 80px 60px;
+    background: #252525;
+    transition: 1.3s;
+
+    transform: translateY(60px);
+    transition: 1.4s;
+  }
+
+  #avaliacoes article {
+    background: var(--cinza);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    transition: 0.4s;
+  }
+
+  #avaliacoes article:hover {
+    transform: translateY(-8px) scale(1.02);
+    border: 2px solid #d4af37;
+    box-shadow: 0 20px 60px rgba(255, 165, 0, 0.2);
+  }
+
+  #avaliacoes h2 {
+    color: var(--branco);
+  }
+
+  #avaliacoes article p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+
+  /* 📞 CONTATO */
+
+  #contato {
+    padding: 80px 60px;
+    background: linear-gradient(120deg, #111, #000);
+    color: white;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1.3s;
+  }
+
+  #contato form {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* 🔻 FOOTER */
+
+  footer {
+    padding: 30px 60px;
+  }
+}
+
+/* 🔻 TABLET */
+@media (max-width: 1264px) {
+  #menu-lateral {
+    width: 200px;
+  }
+
+  main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  #sobre {
+    flex-direction: column;
+  }
+
+  #sobre h2 {
+    position: static;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+/* 🔻 MOBILE */
+@media (max-width: 768px) {
+  /* 🔥 MENU VIRA TOPO */
+  #menu-lateral {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 500px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -30px;
+  }
+
+  nav li {
+    margin: 5px;
+  }
+
+  .btn-agendar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* 🔥 REMOVE ESPAÇO LATERAL */
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* 📦 SECTIONS */
+  section {
+    padding: 60px 20px !important;
+  }
+
+  /* 👨‍⚕️ SOBRE */
+
+  #sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #sobre h2 {
+    position: static;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  #sobre img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* 🛠️ SERVIÇOS */
+  #servicos {
+    grid-template-columns: 1fr;
+  }
+
+  #servicos h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  /* 💳 PLANOS */
+  #planos {
+    grid-template-columns: 1fr;
+  }
+
+  /* ⭐ DEPOIMENTOS */
+  #depoimentos {
+    grid-template-columns: 1fr;
+  }
+
+  /* ⭐ AVALIAÇÕES */
+  #avaliacoes {
+    grid-template-columns: 1fr;
+  }
+
+  /* 📞 FORM */
+  #contato form {
+    width: 100%;
+  }
+
+  /* 🔻 FOOTER */
+  footer {
+    padding: 20px;
+  }
+}
+
+/* 🔻 MOBILE PEQUENO */
+@media (max-width: 414px) {
+  #home header h1 {
+    font-size: 2rem;
+  }
+
+  #home header p {
+    font-size: 1rem;
+  }
+
+  #sobre .sobre-texto h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: black;
+  }
+
+  #planos strong {
+    font-size: 1.5rem;
+  }
+
+  #depoimentos img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #whatsapp img {
+    width: 45px;
+  }
+
+  .minha-footer-redesSociais {
+    margin-top: -200px;
+  }
+
+  .minha-footer-redesSociais nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
