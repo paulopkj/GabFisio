@@ -12,35 +12,29 @@
 
 ---
 
-<h2 align="center">🌐 Sobre o Projeto</h2>
+## 🌐 Sobre o Projeto
 
-<p align="center">
-A <strong>GabFisio</strong> é uma aplicação web profissional desenvolvida para uma clínica de fisioterapia real, com foco em experiência do usuário, design moderno, responsividade e presença digital.
-</p>
+🔗 Projeto online:
 
-<p align="center">
+https://gab-fisio-three.vercel.app/
+
+A **GabFisio** é uma aplicação web profissional desenvolvida para uma clínica de fisioterapia real, com foco em experiência do usuário, design moderno, responsividade e presença digital.
+
 O projeto foi desenvolvido do zero com o objetivo de criar uma experiência moderna, intuitiva e visualmente profissional para pacientes e visitantes.
-</p>
 
-<p align="center">
-💡 <strong>Destaque:</strong> O sistema já está em uso por uma cliente real e vem contribuindo diretamente para sua presença digital e comunicação online.
-</p>
+💡 **Destaque:** O sistema já está em uso por uma cliente real e vem contribuindo diretamente para fortalecer sua presença digital e comunicação online.
 
 ---
 
-<h2 align="center">🎥 Demonstração do Projeto</h2>
+## 🎥 Demonstração do Projeto
 
-<p align="center">
 📌 Assista ao vídeo demonstrativo abaixo:
-</p>
 
 https://github.com/user-attachments/assets/aaa49dff-8168-484d-803b-144b33137d2f
 
 ---
 
-<h2 align="center">✨ Funcionalidades</h2>
-
-<p align="center">
+## ✨ Funcionalidades
 
 ✅ Layout moderno e totalmente responsivo
 
@@ -48,7 +42,7 @@ https://github.com/user-attachments/assets/aaa49dff-8168-484d-803b-144b33137d2f
 
 ✅ Integração direta com WhatsApp
 
-✅ Sistema de avaliações com LocalStorage
+✅ Sistema de avaliações utilizando LocalStorage
 
 ✅ Animações suaves com Intersection Observer
 
@@ -60,11 +54,9 @@ https://github.com/user-attachments/assets/aaa49dff-8168-484d-803b-144b33137d2f
 
 ✅ Design adaptado para dispositivos móveis
 
-</p>
-
 ---
 
-<h2 align="center">🛠️ Tecnologias Utilizadas</h2>
+## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
 
@@ -84,51 +76,29 @@ https://github.com/user-attachments/assets/aaa49dff-8168-484d-803b-144b33137d2f
 
 ---
 
-<h2 align="center">📱 Responsividade</h2>
+## 📱 Responsividade
 
-<p align="center">
+Projeto desenvolvido para:
 
 ✅ Mobile  
 ✅ Tablet  
 ✅ Desktop  
 
-</p>
-
 ---
 
-<h2 align="center">📂 Estrutura do Projeto</h2>
+## 📂 Estrutura do Projeto
 
+```bash
 📁 assets
 📁 img
 📄 index.html
 📄 styles.css
 📄 script.js
+```
 
 ---
 
-<h2 align="center">🌐 Deploy</h2> <p align="center">
-
-🔗 Projeto online:
-
-https://gab-fisio-three.vercel.app/
-
-</p>
-
----
-
-<h2 align="center">💻 Como Executar o Projeto</h2>
-
-Clone este repositório:
-
-git clone https://github.com/paulopkj/GabFisio.git
-
-cd GabFisio
-
-index.html
-
----
-
-<h2 align="center">📈 Melhorias Futuras</h2> <p align="center">
+## 📈 Melhorias Futuras
 
 🚀 Integração com backend
 
@@ -140,47 +110,25 @@ index.html
 
 🚀 Otimização avançada de performance
 
-</p>
-
 ---
 
-<h2 align="center">🤝 Contato</h2> <p align="center">
+## 🤝 Contato
 
 💼 Disponível para oportunidades e projetos freelance.
-
-</p> <p align="center">
 
 📱 WhatsApp:
 https://wa.me/5585989792739
 
-</p> <p align="center">
-
 💼 LinkedIn:
 https://linkedin.com/in/fullstack-paulo-ricardo
 
-</p>
-
 ---
 
-<h2 align="center">👨‍💻 Autor</h2> <p align="center">
+## 👨‍💻 Autor
 
-Desenvolvido por <strong>Paulo Ricardo</strong> 🚀
-
-</p> <p align="center">
+Desenvolvido por Paulo Ricardo 🚀
 
 Desenvolvedor Full Stack focado em criar interfaces modernas, responsivas e experiências digitais profissionais.
-
-</p>
-
----
-
-<h2 align="center">⭐ Apoie o Projeto</h2> <p align="center">
-
-⭐ Deixe uma estrela no repositório
-
-📢 Compartilhe com outros desenvolvedores
-
-</p>
 
 
 
