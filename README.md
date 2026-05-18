@@ -1,110 +1,186 @@
 # 🚀 GabFisio | Website Profissional para Clínica de Fisioterapia
 
-![Status](https://img.shields.io/badge/status-em%20uso%20real-success)
-![Responsivo](https://img.shields.io/badge/responsivo-100%25-blue)
-![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-orange)
+<p align="center">
+
+<img src="https://img.shields.io/badge/status-em%20uso%20real-success?style=for-the-badge" />
+
+<img src="https://img.shields.io/badge/responsivo-100%25-blue?style=for-the-badge" />
+
+<img src="https://img.shields.io/badge/frontend-HTML5%20%7C%20CSS3%20%7C%20JavaScript-orange?style=for-the-badge" />
+
+</p>
 
 ---
 
-## 💻 Sobre o Projeto
+<h2 align="center">🌐 Sobre o Projeto</h2>
 
-  A **GabFisio** é um website profissional desenvolvido do zero com foco em **experiência do usuário (UX), design moderno e conversão de clientes**.
+<p align="center">
+A <strong>GabFisio</strong> é uma aplicação web profissional desenvolvida para uma clínica de fisioterapia real, com foco em experiência do usuário, design moderno, responsividade e presença digital.
+</p>
 
-Este projeto foi criado para uma clínica de fisioterapia real, com o objetivo de apresentar serviços, facilitar o contato e melhorar a presença digital.
+<p align="center">
+O projeto foi desenvolvido do zero com o objetivo de criar uma experiência moderna, intuitiva e visualmente profissional para pacientes e visitantes.
+</p>
 
-👉 **Diferencial:** O sistema já está em uso por uma cliente real, que está satisfeita com os resultados entregues.
+<p align="center">
+💡 <strong>Destaque:</strong> O sistema já está em uso por uma cliente real e vem contribuindo diretamente para sua presença digital e comunicação online.
+</p>
 
 ---
 
-## 🎥 Demonstração do Projeto
+<h2 align="center">🎥 Demonstração do Projeto</h2>
 
+<p align="center">
 📌 Assista ao vídeo demonstrativo abaixo:
+</p>
 
 https://github.com/user-attachments/assets/aaa49dff-8168-484d-803b-144b33137d2f
 
 ---
 
-## ✨ Funcionalidades
+<h2 align="center">✨ Funcionalidades</h2>
 
-✔ Layout moderno e responsivo
+<p align="center">
 
-✔ Menu lateral fixo e navegação suave
+✅ Layout moderno e totalmente responsivo
 
-✔ Integração direta com WhatsApp 📲
+✅ Navegação suave entre seções
 
-✔ Seções organizadas estrategicamente
+✅ Integração direta com WhatsApp
 
-✔ Sistema de avaliações com LocalStorage ⭐
+✅ Sistema de avaliações com LocalStorage
 
-✔ Animações ao scroll (Intersection Observer)
+✅ Animações suaves com Intersection Observer
 
-✔ Botões interativos com efeitos visuais
+✅ Botões interativos e microinterações
 
-✔ Estrutura pensada para conversão de clientes
+✅ Estrutura otimizada para experiência do usuário
 
----
+✅ Interface estratégica para conversão de clientes
 
-## 🧠 Tecnologias Utilizadas
+✅ Design adaptado para dispositivos móveis
 
-* HTML5
-* CSS3 (Flexbox, Grid, Responsividade)
-* JavaScript (DOM, Eventos, LocalStorage)
-* UX/UI Design
+</p>
 
 ---
 
-## 📱 Responsividade
+<h2 align="center">🛠️ Tecnologias Utilizadas</h2>
 
-O projeto foi desenvolvido para funcionar perfeitamente em:
+### Frontend
 
-📱 Mobile
-💻 Desktop
-📲 Tablet
+- HTML5
+- CSS3
+- JavaScript ES6+
+
+### Conceitos Aplicados
+
+- Responsividade
+- Flexbox
+- CSS Grid
+- UX/UI Design
+- DOM Manipulation
+- LocalStorage
+- Scroll Animations
 
 ---
 
-## 📂 Estrutura do Projeto
+<h2 align="center">📱 Responsividade</h2>
 
-```bash
+<p align="center">
+
+✅ Mobile  
+✅ Tablet  
+✅ Desktop  
+
+</p>
+
+---
+
+<h2 align="center">📂 Estrutura do Projeto</h2>
+
 📁 assets
 📁 img
 📄 index.html
-📄 estylles.css
-📄 escript.js
-```
+📄 styles.css
+📄 script.js
 
 ---
 
-## 📈 Evolução Contínua
+<h2 align="center">🌐 Deploy</h2> <p align="center">
 
-Este projeto está em constante evolução, com melhorias frequentes em:
+🔗 Projeto online:
 
-* Performance
-* Design
-* Experiência do usuário
-* Boas práticas de desenvolvimento
+https://gab-fisio-three.vercel.app/
 
----
-
-## 🤝 Contato
-
-💼 Estou disponível para oportunidades e projetos freelance.
-
-📧 Entre em contato:
-
-📱 WhatsApp: https://wa.me/5585989792739
+</p>
 
 ---
 
-## 🔥 Autor
+<h2 align="center">💻 Como Executar o Projeto</h2>
 
-Desenvolvido por **Paulo Ricardo** 🚀
-Full Stack Web em evolução constante
+Clone este repositório:
+
+git clone https://github.com/paulopkj/GabFisio.git
+
+cd GabFisio
+
+index.html
 
 ---
 
-## ⭐ Se você gostou do projeto
+<h2 align="center">📈 Melhorias Futuras</h2> <p align="center">
 
-Deixe uma ⭐ no repositório e compartilhe!
+🚀 Integração com backend
+
+🚀 Sistema de agendamento online
+
+🚀 Painel administrativo
+
+🚀 Integração com banco de dados
+
+🚀 Otimização avançada de performance
+
+</p>
 
 ---
+
+<h2 align="center">🤝 Contato</h2> <p align="center">
+
+💼 Disponível para oportunidades e projetos freelance.
+
+</p> <p align="center">
+
+📱 WhatsApp:
+https://wa.me/5585989792739
+
+</p> <p align="center">
+
+💼 LinkedIn:
+https://linkedin.com/in/fullstack-paulo-ricardo
+
+</p>
+
+---
+
+<h2 align="center">👨‍💻 Autor</h2> <p align="center">
+
+Desenvolvido por <strong>Paulo Ricardo</strong> 🚀
+
+</p> <p align="center">
+
+Desenvolvedor Full Stack focado em criar interfaces modernas, responsivas e experiências digitais profissionais.
+
+</p>
+
+---
+
+<h2 align="center">⭐ Apoie o Projeto</h2> <p align="center">
+
+⭐ Deixe uma estrela no repositório
+
+📢 Compartilhe com outros desenvolvedores
+
+</p>
+
+
+
